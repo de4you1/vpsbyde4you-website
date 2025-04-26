@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS High Quality by DE4YOU YT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --accent: #fd79a8;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --success: #00b894;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .pricing-body {
+            padding: 2rem;
+        }
+        
+        .specs {
+            margin-bottom: 1.5rem;
+        }
+        
+        .spec {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .spec i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+        }
+        
+        .benefits {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            background: rgba(108, 92, 231, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+        
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            background: #128C7E;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--dark);
+            color: white;
+        }
+        
+        .social-links {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .benefits {
+                padding: 2rem 1rem;
+            }
+            
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-server"></i>
+            <span>VPS HIGH QUALITY</span>
+        </div>
+        <p class="tagline">Premium Virtual Private Server dengan harga terjangkau. Kualitas tinggi untuk performa maksimal!</p>
+    </header>
+    
+    <div class="container">
+        <div class="section-title">
+            <h2>Paket VPS Kami</h2>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="pricing-name">R2 C2</div>
+                    <div class="pricing-price">20K<span>/bulan</span></div>
+                </div>
+                <div class="pricing-body">
+                    <div class="specs">
+                        <div class="spec"><i class="fas fa-check-circle"></i> RAM: 2GB</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> CPU: 2 Core</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Storage: 20GB SSD</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Bandwidth: 1Gbps</div>
+                    </div>
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20dengan%20VPS%20R2%20C2%2020K" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="pricing-name">R4 C2</div>
+                    <div class="pricing-price">35K<span>/bulan</span></div>
+                </div>
+                <div class="pricing-body">
+                    <div class="specs">
+                        <div class="spec"><i class="fas fa-check-circle"></i> RAM: 4GB</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> CPU: 2 Core</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Storage: 40GB SSD</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Bandwidth: 1Gbps</div>
+                    </div>
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20dengan%20VPS%20R4%20C2%2035K" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="popular-tag">POPULER</div>
+                <div class="pricing-header">
+                    <div class="pricing-name">R8 C4</div>
+                    <div class="pricing-price">45K<span>/bulan</span></div>
+                </div>
+                <div class="pricing-body">
+                    <div class="specs">
+                        <div class="spec"><i class="fas fa-check-circle"></i> RAM: 8GB</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> CPU: 4 Core</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Storage: 80GB SSD</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Bandwidth: 1Gbps</div>
+                    </div>
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20dengan%20VPS%20R8%20C4%2045K" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="pricing-name">R16 C4</div>
+                    <div class="pricing-price">55K<span>/bulan</span></div>
+                </div>
+                <div class="pricing-body">
+                    <div class="specs">
+                        <div class="spec"><i class="fas fa-check-circle"></i> RAM: 16GB</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> CPU: 4 Core</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Storage: 160GB SSD</div>
+                        <div class="spec"><i class="fas fa-check-circle"></i> Bandwidth: 1Gbps</div>
+                    </div>
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20dengan%20VPS%20R16%20C4%2055K" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title">
+            <h2>Benefit VPS Kami</h2>
+        </div>
+        
+        <div class="benefits">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-wrench"></i></div>
+                    <h3 class="benefit-title">Free Install Panel</h3>
+                    <p>Kami menyediakan instalasi panel gratis sesuai kebutuhan Anda</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="benefit-title">Free Install Thema</h3>
+                    <p>Tema premium terpasang gratis untuk tampilan yang lebih profesional</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="benefit-title">Free SC cPanel</h3>
+                    <p>Dapatkan cPanel original dengan harga spesial dari kami</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="benefit-title">Free Egg Bot WA</h3>
+                    <p>Bonus bot WhatsApp untuk otomatisasi bisnis Anda</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3 class="benefit-title">Garansi 15H 1x Replace</h3>
+                    <p>Garansi penggantian jika ada masalah dalam 15 hari pertama</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h3 class="benefit-title">Aktif Selama Sebulan</h3>
+                    <p>VPS aktif penuh selama 30 hari tanpa gangguan</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h2>Siap Meningkatkan Performa Website Anda?</h2>
+            <p>Dapatkan VPS berkualitas tinggi dengan harga terjangkau. Tim support kami siap membantu 24/7.</p>
+            <a href="https://wa.me/6287778002663" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://youtube.com/@de4you-ytnew?si=7wG4pXRS0S5_CRMT"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/christoy.only?igsh=MXM0dHZqaXV0ODN0NA=="><i class="fab fa-instagram"></i></a>
+            <a href="t.me/@de4youmodesoloo"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>&copy; 2023 VPS High Quality by DE4YOU YT. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.pricing-card, .benefit-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
